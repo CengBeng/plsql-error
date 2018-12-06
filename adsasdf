@@ -1,0 +1,17 @@
+DECLARE
+
+	--Declare variables
+	nValue		NUMBER(10) := &enter_value;
+	vMessage	VARCHAR(30);
+
+BEGIN
+	--Test the value entered by the user
+	IF nValue > 60000 THEN
+
+		--Set and display the message
+		vMessage := q'!The value isn't valid.!';
+		dbms_output.put_line(vMessage);
+
+	END IF;
+
+END;
